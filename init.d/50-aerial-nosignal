@@ -1,0 +1,3 @@
+#!/bin/sh
+# Homebrew Channel init script: start the watcher in the background after boot.
+( sleep 60; exec /home/root/aerial-nosignal.sh ) >/dev/null 2>&1 &
