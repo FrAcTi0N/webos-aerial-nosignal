@@ -139,6 +139,7 @@ With *Quick Start+* the TV only suspends when you turn it off, so the script kee
 - **Nothing starts:** run `sh -x /home/root/aerial-nosignal.sh` and check that the foreground app is `HDMI_APP` while "No Signal" is shown.
 - **The screensaver never ends on a key press:** check `KEY_DEV` and see `/tmp/aerial.log` for a "key pressed" line.
 - **Kodi does not wake:** repeat the step 6 test while Kodi is asleep; try another `KODI_WAKE_ACTION`.
+- **A spinner shows after turning the TV on with Power:** the script now returns to the HDMI input before powering off, so the TV resumes there. If you see this with an older copy of the script, update it.
 - **Copy/paste of multi-line `curl` fails:** use one line, no trailing backslashes.
 - **`timeout` not found:** it is not installed on webOS; the examples avoid it.
 - **TV turns itself off after hours:** that is webOS's own auto power off (usually 4 h in the EU). `AERIAL_MAX_MIN` lets you act sooner.

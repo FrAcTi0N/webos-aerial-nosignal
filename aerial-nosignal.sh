@@ -87,8 +87,8 @@ start_keywatch() {
     sleep "$KEY_GRACE"
     k=$(wait_key) || exit 0
     if [ "$k" = power ]; then
-      log "power key, closing screensaver and turning TV off"
-      close_app "$AERIAL_APP"; tv_off
+      log "power key, closing screensaver, returning to input and turning TV off"
+      close_app "$AERIAL_APP"; sleep 1; launch "$HDMI_APP"; sleep 2; tv_off
     else
       log "key pressed, closing screensaver"
       screen_on
